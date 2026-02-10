@@ -1,0 +1,7 @@
+Status,Date,Time,Patient Name,Phone Number,Type,Notes
+New,2024-02-12,09:30,Ivan Petrov,0888 123 456,Consultation,Found via Google
+Confirmed,2024-02-12,11:00,Maria Georgieva,0899 987 654,Aesthetics,Interested in veneers
+New,2024-02-12,14:30,Dimitar Dimitrov,0877 555 111,Emergency,Pain in lower left molar
+Completed,2024-02-11,10:00,Elena Koleva,0888 333 222,Child Care,First visit
+Confirmed,2024-02-13,09:00,Stefan Nikolov,0895 111 222,Hygiene,Regular checkup
+Pending,2024-02-13,15:00,Gergana Stoyanova,0887 444 555,Consultation, wants to ask about prices
