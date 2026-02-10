@@ -176,7 +176,10 @@ document.getElementById('backToSlots').addEventListener('click', () => {
 });
 
 // FINAL BOOKING ACTION
-document.getElementById('finalBookBtn').addEventListener('click', () => {
+document.getElementById('finalBookBtn').addEventListener('click', function() {
+    const btn = this;
+    const originalText = btn.innerText;
+    
     const name = document.getElementById('c_name').value;
     const phone = document.getElementById('c_phone').value;
     
@@ -184,15 +187,61 @@ document.getElementById('finalBookBtn').addEventListener('click', () => {
         alert("Моля попълнете име и телефон.");
         return;
     }
+
+    // 1. Visual Feedback
+    btn.innerText = "ЗАПАЗВАНЕ...";
+    btn.disabled = true;
     
-    // Construct WhatsApp Message
-    const dateString = selectedDate.toLocaleDateString('bg-BG', { day: 'numeric', month: 'long'});
-    const message = `Здравейте, казвам се ${name}. Искам да запазя час за ${dateString} в ${selectedTime}. Телефон: ${phone}.`;
+    // 2. Prepare Data
+    // We format the date nicely for the sheet
+    const dateString = selectedDate.toLocaleDateString('bg-BG'); 
     
-    const clinicPhone = "359000000000"; // Replace with Dr. Oh Boli's real number
-    const waLink = `https://wa.me/${clinicPhone}?text=${encodeURIComponent(message)}`;
-    
-    window.open(waLink, '_blank');
+    const bookingData = {
+        name: name,
+        phone: phone,
+        date: dateString,
+        time: selectedTime
+    };
+
+    // 3. Send to Google Sheets (The Magic)
+    // GOOGLE SCRIPT URL
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby-Kr3pb1VaHkUGl2bYeyVy3tmSnleaqjbYOcZ7Avo_-PxTUzSUoUYrkeECUpClgK6zLw/exec";
+
+    fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Important for Google Sheets
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(bookingData)
+    })
+    .then(() => {
+        // 4. Success!
+        
+        // WhatsApp Backup (Still open WhatsApp just in case)
+        const waMessage = `Здравейте, казвам се ${name}. Запазих час през сайта за ${dateString} в ${selectedTime}.`;
+        const waLink = `https://wa.me/359000000000?text=${encodeURIComponent(waMessage)}`;
+        
+        // Redirect to WhatsApp or Show Success
+        btn.innerText = "УСПЕШНО ЗАПАЗЕН! ✅";
+        btn.classList.replace('bg-blue-600', 'bg-green-600');
+        
+        setTimeout(() => {
+            window.open(waLink, '_blank');
+            // Reset form
+            document.getElementById('slotsView').classList.remove('hidden');
+            document.getElementById('bookingInputs').classList.add('hidden');
+            btn.innerText = originalText;
+            btn.disabled = false;
+            btn.classList.replace('bg-green-600', 'bg-blue-600');
+        }, 1500);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("Възникна грешка. Моля, свържете се с нас по телефона.");
+        btn.innerText = originalText;
+        btn.disabled = false;
+    });
 });
 
 // Initialize
