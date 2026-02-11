@@ -29,16 +29,27 @@ if(menuToggle) {
     });
 }
 
-// Reveal Animation
-const observerOptions = { threshold: 0.2 };
+// ----------------------------
+//  PREMIUM ANIMATION OBSERVER (UPDATED)
+// ----------------------------
+const observerOptions = { 
+    threshold: 0.15, // Trigger when 15% visible
+    rootMargin: "0px 0px -50px 0px" 
+};
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
+            // Optional: Stop observing once revealed for better performance
+            observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// TARGET ALL ANIMATION CLASSES
+const hiddenElements = document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale');
+hiddenElements.forEach((el) => observer.observe(el));
 
 
 // ----------------------------

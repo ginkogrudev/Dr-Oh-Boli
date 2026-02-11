@@ -12,35 +12,56 @@
 </head>
 <body class="selection:bg-blue-200 selection:text-blue-900">
 
-    <nav class="fixed top-0 w-full z-[100] nav-glass px-6 lg:px-12 py-4 flex justify-between items-center transition-all" id="navbar">
+    <nav class="fixed top-0 w-full z-[100] bg-white/90 backdrop-blur-md border-b border-white/20 transition-all" id="navbar">
+    <div class="px-6 lg:px-12 py-3 flex justify-between items-center">
+        
         <a href="#" class="flex items-center gap-3 group">
-            <img src="img/favicon.png" alt="Dr Oh Boli Logo" class="w-12 h-12 rounded-full border-2 border-blue-50 shadow-sm group-hover:scale-105 transition-transform duration-300">
-            <span class="text-xl font-extrabold tracking-tight text-slate-800">Д-р Ох Боли<span class="text-blue-500">.</span></span>
+            <img src="img/favicon.png" alt="Dr Oh Boli" class="w-10 h-10 rounded-full border-2 border-blue-50 shadow-sm group-hover:scale-105 transition-transform duration-300">
+            <span class="text-xl font-extrabold tracking-tight text-slate-800 leading-none">
+                Д-р Ох Боли<span class="text-blue-500">.</span>
+            </span>
         </a>
         
-        <div class="hidden lg:flex gap-8 text-sm font-bold text-slate-500">
-            <a href="#services" class="hover:text-blue-600 transition-colors">Как помагаме</a>
-            <a href="#team" class="hover:text-blue-600 transition-colors">За Нас</a>
-            <a href="#reviews-wall" class="hover:text-blue-600 transition-colors">Истории</a>
+        <div class="hidden lg:flex gap-8 text-sm font-bold text-slate-500 uppercase tracking-wider">
+            <a href="#services" class="hover:text-blue-600 transition-colors py-2">Услуги</a>
+            <a href="#team" class="hover:text-blue-600 transition-colors py-2">За Нас</a>
+            <a href="#reviews-wall" class="hover:text-blue-600 transition-colors py-2">Отзиви</a>
         </div>
     
-        <div class="flex items-center gap-4">
-            <button onclick="document.getElementById('book').scrollIntoView()" class="btn-primary hidden sm:block">Запази Час</button>
-            <button id="menu-toggle" class="lg:hidden p-2 text-slate-700">
+        <div class="flex items-center gap-3">
+            <a href="tel:+359888123456" class="lg:hidden w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            </a>
+
+            <button onclick="document.getElementById('book').scrollIntoView()" class="btn-primary hidden sm:block shadow-lg shadow-blue-200/50">
+                Запази Час
+            </button>
+            
+            <button id="menu-toggle" class="lg:hidden p-2 text-slate-800 hover:bg-slate-100 rounded-lg transition-colors">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-    </nav>
-    
-    <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-xl z-[200] flex flex-col items-center justify-center gap-8 text-slate-800 translate-x-full transition-transform duration-500 ease-in-out">
-        <button id="close-menu" class="absolute top-6 right-6 p-2">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-        <a href="#services" class="text-4xl font-black mobile-link">Услуги</a>
-        <a href="#team" class="text-4xl font-black mobile-link">За Мен</a>
-        <a href="#reviews-wall" class="text-4xl font-black mobile-link">Мнения</a>
-        <button onclick="document.getElementById('book').scrollIntoView(); toggleMenu();" class="btn-primary text-xl px-10 py-5">ЗАПАЗЕТЕ ЧАС</button>
     </div>
+</nav>
+
+<div id="mobile-menu" class="fixed inset-0 bg-white/98 z-[200] flex flex-col items-center justify-center gap-8 text-slate-900 translate-x-full transition-transform duration-500 ease-in-out">
+    <button id="close-menu" class="absolute top-6 right-6 p-4 text-slate-500 hover:text-red-500 transition-colors">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    
+    <div class="flex flex-col items-center gap-6 text-3xl font-black uppercase tracking-tight">
+        <a href="#services" class="mobile-link hover:text-blue-600 transition-colors">Услуги</a>
+        <a href="#team" class="mobile-link hover:text-blue-600 transition-colors">За Мен</a>
+        <a href="#reviews-wall" class="mobile-link hover:text-blue-600 transition-colors">Мнения</a>
+    </div>
+
+    <div class="mt-8 w-full px-10">
+        <button onclick="document.getElementById('book').scrollIntoView(); toggleMenu();" class="btn-primary w-full py-5 text-xl shadow-xl">
+            ЗАПАЗЕТЕ ЧАС
+        </button>
+        <p class="text-center mt-6 text-slate-400 text-sm font-bold">или се обадете на <br> <a href="tel:+359888123456" class="text-blue-600 text-lg">08XX XXX XXX</a></p>
+    </div>
+</div>
     
     <section class="pt-36 pb-24 px-6 relative overflow-hidden">
         <div class="absolute top-0 right-0 -mr-40 -mt-40 w-[800px] h-[800px] bg-blue-50 rounded-full blur-3xl -z-10 opacity-70"></div>
@@ -79,45 +100,58 @@
         </div>
     </section>
 
-   <section id="results" class="py-24 bg-white">
+   <section id="results" class="py-24 bg-white overflow-hidden">
     <div class="container mx-auto px-6">
         
-        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
             <h2 class="text-sm font-bold tracking-widest text-blue-500 uppercase mb-4">Галерия</h2>
-            <h3 class="text-5xl font-black text-slate-900">Увереност в кадър</h3>
+            <h3 class="text-5xl font-black text-slate-900">Магията на Промяната</h3>
         </div>
 
-        <div class="flex flex-col md:flex-row items-stretch gap-4 h-[550px]" id="gallery-container">
-            <div class="side-column flex-1 flex flex-col gap-4 reveal transition-all duration-700">
-                <div class="flex-1 rounded-[2rem] overflow-hidden shadow-sm border border-slate-100 group">
-                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Smile 1">
+        <div class="bento-container reveal-scale">
+            
+            <div class="bento-item group">
+                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Smile 1">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <h4 class="text-white text-3xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Увереност</h4>
+                    <p class="text-slate-300 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">Естетично възстановяване</p>
                 </div>
-                <div class="flex-1 rounded-[2rem] overflow-hidden shadow-sm border border-slate-100 group">
-                    <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Tools">
+            </div>
+             <div class="bento-item group">
+                <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Tools">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <h4 class="text-white text-3xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Прецизност</h4>
+                    <p class="text-slate-300 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">Модерна техника</p>
                 </div>
             </div>
 
-            <div class="hero-column flex-[2.5] relative cursor-pointer reveal reveal-delay-2 transition-all duration-700 group rounded-[2.5rem] overflow-hidden shadow-2xl" 
-                 onclick="toggleAccordion(this)">
-                <img src="img/mouth.jpg" class="w-full h-full object-cover brightness-95 group-hover:scale-105 transition-transform duration-1000" alt="Main Result">
-                
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-10 text-white">
-                    <h4 class="text-3xl font-bold mb-2">Пълна Промяна</h4>
-                    <p class="text-blue-100 font-medium opacity-90">Натиснете за детайли</p>
-                    <div class="accordion-content max-h-0 opacity-0 overflow-hidden transition-all duration-500">
-                        <p class="text-sm text-white/80 mt-4 leading-relaxed">Постигаме естествена красота чрез минимално инвазивни техники и модерна апаратура.</p>
-                    </div>
+
+            <div class="bento-item group" style="flex: 2;"> <img src="img/mouth.jpg" class="w-full h-full object-cover" alt="Main Result">
+                <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg opacity-100 group-hover:opacity-0 transition-opacity">
+                    <p class="font-bold text-slate-900">👈 Задръжте за детайли</p>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+                    <h4 class="text-white text-4xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Пълна Промяна</h4>
+                    <p class="text-blue-200 mt-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">Комплексно лечение с фасети и импланти.</p>
                 </div>
             </div>
 
-            <div class="side-column flex-1 flex flex-col gap-4 reveal reveal-delay-3 transition-all duration-700">
-                <div class="flex-1 rounded-[2rem] overflow-hidden shadow-sm border border-slate-100 group">
-                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Smile 3">
-                </div>
-                <div class="flex-1 rounded-[2rem] overflow-hidden shadow-sm border border-slate-100 group">
-                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Smile 4">
+            <div class="bento-item group">
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Smile 3">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <h4 class="text-white text-3xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Усмивки</h4>
+                    <p class="text-slate-300 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">Доволни пациенти всеки ден</p>
                 </div>
             </div>
+            
+            <div class="bento-item group">
+                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="Smile 4">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                    <h4 class="text-white text-3xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Детайли</h4>
+                    <p class="text-slate-300 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">Прецизност във всеки микрон</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
