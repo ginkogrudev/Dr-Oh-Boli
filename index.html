@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Д-р Ох Боли | Приятелският Стоматолог в Ямбол</title>
     
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="selection:bg-blue-200 selection:text-blue-900">
 
     <nav class="fixed top-0 w-full z-[100] nav-glass px-6 lg:px-12 py-4 flex justify-between items-center transition-all" id="navbar">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-black text-xl border-2 border-blue-50">D</div>
+        <a href="#" class="flex items-center gap-3 group">
+            <img src="img/favicon.png" alt="Dr Oh Boli Logo" class="w-12 h-12 rounded-full border-2 border-blue-50 shadow-sm group-hover:scale-105 transition-transform duration-300">
             <span class="text-xl font-extrabold tracking-tight text-slate-800">Д-р Ох Боли<span class="text-blue-500">.</span></span>
-        </div>
+        </a>
         
         <div class="hidden lg:flex gap-8 text-sm font-bold text-slate-500">
             <a href="#services" class="hover:text-blue-600 transition-colors">Как помагаме</a>
@@ -68,7 +70,7 @@
                 </div>
             </div>
             <div class="relative order-1 lg:order-2">
-                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80" class="rounded-[3rem] shadow-2xl border-8 border-white object-cover h-[600px] w-full rotate-2 hover:rotate-0 transition-transform duration-700" alt="Стоматологичен Кабинет Ямбол">
+                <img src="img/smile-dr-oh-boli-yambol.png" class="rounded-[3rem] shadow-2xl border-8 border-white object-cover h-[600px] w-full rotate-2 hover:rotate-0 transition-transform duration-700" alt="Стоматологичен Кабинет Ямбол">
                 <div class="absolute bottom-10 -left-10 bg-white p-6 rounded-[2rem] shadow-xl animate-bounce hidden md:block">
                     <p class="text-xs font-bold text-slate-400 uppercase">Опит</p>
                     <p class="text-4xl font-black text-blue-600">10г.</p>
@@ -97,7 +99,7 @@
 
             <div class="hero-column flex-[2.5] relative cursor-pointer reveal reveal-delay-2 transition-all duration-700 group rounded-[2.5rem] overflow-hidden shadow-2xl" 
                  onclick="toggleAccordion(this)">
-                <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover brightness-95 group-hover:scale-105 transition-transform duration-1000" alt="Main Result">
+                <img src="img/mouth.jpg" class="w-full h-full object-cover brightness-95 group-hover:scale-105 transition-transform duration-1000" alt="Main Result">
                 
                 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-10 text-white">
                     <h4 class="text-3xl font-bold mb-2">Пълна Промяна</h4>
@@ -223,7 +225,7 @@
     </div>
 </section>
 
-<section id="services" class="py-24 bg-slate-50">
+<section id="services" class="py-24 bg-white">
     <div class="container mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-16">
             <h2 class="text-4xl font-black text-slate-900 mb-4">Нашите Услуги</h2>
@@ -231,51 +233,417 @@
         </div>
         
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="card-premium p-10">
-                <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-3xl mb-6">🦷</div>
-                <h4 class="text-xl font-bold text-slate-900 mb-3">Лечение & Профилактика</h4>
-                <p class="text-slate-500">Почистване на зъбен камък, лечение на кариеси и кореново лечение.</p>
+            <div class="card-premium bg-white shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                <div class="h-48 overflow-hidden">
+                    <img src="img/mouth.jpg" 
+                         alt="Лечение" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl mb-4">🦷</div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Лечение & Профилактика</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Почистване на зъбен камък, лечение на кариеси и кореново лечение с внимание към детайла.</p>
+                </div>
             </div>
-            <div class="card-premium p-10">
-                <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-3xl mb-6">✨</div>
-                <h4 class="text-xl font-bold text-slate-900 mb-3">Естетика</h4>
-                <p class="text-slate-500">Бондинг, фасети и избелване за ослепителна усмивка.</p>
+
+            <div class="card-premium bg-white shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                <div class="h-48 overflow-hidden">
+                    <img src="img/smile-1.jpg" 
+                         alt="Естетика" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-2xl mb-4">✨</div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Естетика</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Бондинг, фасети и професионално избелване за ослепителна и уверена усмивка.</p>
+                </div>
             </div>
-            <div class="card-premium p-10">
-                <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-3xl mb-6">🧸</div>
-                <h4 class="text-xl font-bold text-slate-900 mb-3">Детска Дентална Медицина</h4>
-                <p class="text-slate-500">Специално отношение към най-малките пациенти.</p>
+
+            <div class="card-premium bg-white shadow-lg border border-slate-100 overflow-hidden group hover:shadow-2xl transition-all duration-300">
+                <div class="h-48 overflow-hidden">
+                    <img src="img/doctor-oh-boli.jpg" 
+                         alt="Детска Стоматология" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="p-8">
+                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-2xl mb-4">🧸</div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Детска Стоматология</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Специално отношение към най-малките пациенти, за да идват при нас с желание.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-    <footer class="bg-white pt-24 pb-12 border-t border-slate-100">
-    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 items-start">
-        <div>
-            <div class="flex items-center gap-3 mb-6">
-                <div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold">D</div>
-                <span class="text-2xl font-black tracking-tight text-slate-900">Д-р Ох Боли.</span>
-            </div>
-            <p class="text-slate-400 text-base leading-relaxed">
-                Стоматологичен кабинет в Ямбол. Професионализъм и лично отношение.
-            </p>
+<section id="reviews-wall" class="py-24 bg-slate-50 overflow-hidden">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12 reveal">
+            <h2 class="text-xs font-bold tracking-[0.4em] text-blue-500 uppercase mb-4">Отзиви</h2>
+            <h3 class="text-4xl font-black text-blue-900 uppercase">Стената на Усмивките</h3>
+            <p class="text-slate-400 mt-2">Вижте какво казват нашите пациенти.</p>
         </div>
 
-        <div class="space-y-6">
-            <h5 class="font-bold text-slate-900 uppercase tracking-widest text-xs">Контакти</h5>
-            <div class="text-slate-600 text-lg font-medium space-y-3">
-                <p>📍 гр. Ямбол</p>
-                <p>📞 <a href="#" class="hover:text-blue-600 transition-colors">08XX XXX XXX</a></p>
+        <div class="relative h-[800px] overflow-hidden wall-container wall-mask">
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="marquee-col scroll-up">
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Най-добрият зъболекар в Ямбол! Страх ме беше много, но тук забравих за болката."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Иван Петров</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Много чисто, модерно и уютно. Препоръчвам с две ръце!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Мария Георгиева</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Д-р Ох Боли е вълшебник. Спаси зъб, който други искаха да вадят."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Стефан Илиев</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Страхотно отношение към децата. Синът ми вече пита кога ще ходим пак."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Елена Димитрова</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Цените са напълно нормални за качеството, което получавате."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Георги Христов</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Бързо, точно и професионално. Нямам забележки."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Александър Томов</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Усмивката ми грейна отново! Благодаря Ви, докторе!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Виктория Маринова</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Работят с НЗОК, което е огромно предимство."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Димитър Колев</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Винаги усмихнати и любезни. Удоволствие е да се идва тук."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Силвия Тодорова</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Препоръчах на всичките си приятели. Топ ниво!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Мартин Василев</p>
+                    </div>
+
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Най-добрият зъболекар в Ямбол! Страх ме беше много, но тук забравих за болката."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Иван Петров</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Много чисто, модерно и уютно. Препоръчвам с две ръце!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Мария Георгиева</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Д-р Ох Боли е вълшебник. Спаси зъб, който други искаха да вадят."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Стефан Илиев</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Страхотно отношение към децата. Синът ми вече пита кога ще ходим пак."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Елена Димитрова</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Цените са напълно нормални за качеството, което получавате."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Георги Христов</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Бързо, точно и професионално. Нямам забележки."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Александър Томов</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Усмивката ми грейна отново! Благодаря Ви, докторе!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Виктория Маринова</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Работят с НЗОК, което е огромно предимство."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Димитър Колев</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Винаги усмихнати и любезни. Удоволствие е да се идва тук."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Силвия Тодорова</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Препоръчах на всичките си приятели. Топ ниво!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Мартин Василев</p>
+                    </div>
+                </div>
+
+                <div class="marquee-col scroll-down pt-24"> <div class="card-premium p-6 bg-blue-50 shadow-sm border border-blue-100">
+                        <div class="flex text-blue-500 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-700 italic">"Изключителен естетичен резултат. Фасетите ми са прекрасни!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Гергана Стоянова</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Внимание към детайла и грижа. Не бързат, изслушват те."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Петър Петров</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Кабинетът е на супер място, лесно се паркира."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Калоян Иванов</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Никаква болка при вадене на зъб. Златни ръце!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Никола Николов</p>
+                    </div>
+                    <div class="card-premium p-6 bg-blue-50 shadow-sm border border-blue-100">
+                        <div class="flex text-blue-500 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-700 italic">"Най-после намерих своя зъболекар в Ямбол."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Яна Янкова</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Професионалисти до мозъка на костите си. Респект!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Борис Борисов</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Обясняват всичко на разбираем език, което е рядкост."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Радостина Р.</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Възстановиха счупен зъб перфектно. Не си личи!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Тодор Тодоров</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Благодаря за търпението и грижите."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Моника М.</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Супер модерен кабинет, чувстваш се като в Европа."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Ангел А.</p>
+                    </div>
+
+                    <div class="card-premium p-6 bg-blue-50 shadow-sm border border-blue-100">
+                        <div class="flex text-blue-500 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-700 italic">"Изключителен естетичен резултат. Фасетите ми са прекрасни!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Гергана Стоянова</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Внимание към детайла и грижа. Не бързат, изслушват те."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Петър Петров</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Кабинетът е на супер място, лесно се паркира."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Калоян Иванов</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Никаква болка при вадене на зъб. Златни ръце!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Никола Николов</p>
+                    </div>
+                    <div class="card-premium p-6 bg-blue-50 shadow-sm border border-blue-100">
+                        <div class="flex text-blue-500 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-700 italic">"Най-после намерих своя зъболекар в Ямбол."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Яна Янкова</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Професионалисти до мозъка на костите си. Респект!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Борис Борисов</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Обясняват всичко на разбираем език, което е рядкост."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Радостина Р.</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Възстановиха счупен зъб перфектно. Не си личи!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Тодор Тодоров</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Благодаря за търпението и грижите."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Моника М.</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Супер модерен кабинет, чувстваш се като в Европа."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Ангел А.</p>
+                    </div>
+                </div>
+
+                <div class="marquee-col scroll-up pt-12"> <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Ходя с удоволствие на зъболекар, кой би повярвал?"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Михаил М.</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Екипът е невероятен, толкова са мили."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Кирил Киров</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Почистването на зъбен камък беше много внимателно."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Петя П.</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Дойдох по спешност, приеха ме веднага. Спасители!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Христо Х.</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Много съм доволна от избелването. Уникален ефект."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Десислава Д.</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Най-добрата инвестиция в здравето ми."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Стоян Стоянов</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Безкрайно благодаря за новата усмивка!"</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Кристина К.</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Модерна техника и хигиена на високо ниво."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Даниел Д.</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                        <div class="flex text-yellow-400 text-xs mb-2">★★★★★</div>
+                        <p class="text-sm text-slate-600 italic">"Препоръчвам горещо на всички в Ямбол."</p>
+                        <p class="text-xs font-bold text-blue-900 mt-3">— Ивайло И.</p>
+                    </div>
+                    <div class="card-premium p-6 bg-white shadow-sm border border-slate-100">
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="md:text-right pt-4">
-             <p class="text-xs font-bold text-slate-300 uppercase tracking-widest">© 2024 Д-р Ох Боли</p>
+    </div>
+</section>
+<section class="py-20 bg-blue-600 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+        <div class="absolute top-[-50%] left-[-10%] w-[800px] h-[800px] bg-white rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10 text-center text-white">
+        <h2 class="text-4xl md:text-5xl font-black mb-6">Готови ли сте за промяна?</h2>
+        <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+            Не отлагайте здравето си. Запазете час онлайн за по-малко от минута или ни се обадете.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button onclick="document.getElementById('book').scrollIntoView()" class="bg-white text-blue-900 px-10 py-5 rounded-full font-black text-lg shadow-xl hover:scale-105 transition-transform">
+                ЗАПАЗЕТЕ ЧАС ONLINE
+            </button>
+            <a href="tel:+359888123456" class="bg-blue-800 text-white border border-blue-400 px-10 py-5 rounded-full font-bold text-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                ОБАДИ СЕ СЕГА
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-slate-900 text-white pt-20 pb-10 border-t border-slate-800">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <img src="img/favicon.png" alt="Dr Oh Boli" class="w-12 h-12 rounded-full border-2 border-slate-700">
+                    <span class="text-2xl font-black tracking-tight">Д-р Ох Боли<span class="text-blue-500">.</span></span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Модерна стоматология в сърцето на Ямбол. Ние съчетаваме дългогодишен опит с иновативни технологии, за да ви дарим с усмивката, която заслужавате.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white uppercase tracking-widest text-xs mb-6">Контакти</h4>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="tel:+359888123456" class="flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors group">
+                            <div class="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">📞</div>
+                            <span class="font-bold">08XX XXX XXX</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@drohboli.com" class="flex items-center gap-3 text-slate-300 hover:text-blue-400 transition-colors group">
+                            <div class="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">✉️</div>
+                            <span>info@drohboli.com</span>
+                        </a>
+                    </li>
+                    <li class="flex gap-2 pt-2">
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-[#1877F2] transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-[#E4405F] transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white uppercase tracking-widest text-xs mb-6">Навигация</h4>
+                <ul class="space-y-3 text-sm text-slate-400 font-medium">
+                    <li><a href="#" class="hover:text-blue-400 transition-colors">Начало</a></li>
+                    <li><a href="#services" class="hover:text-blue-400 transition-colors">Услуги</a></li>
+                    <li><a href="#team" class="hover:text-blue-400 transition-colors">За Екипа</a></li>
+                    <li><a href="#reviews-wall" class="hover:text-blue-400 transition-colors">Отзиви</a></li>
+                    <li><a href="#book" class="hover:text-blue-400 transition-colors">Запази Час</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-white uppercase tracking-widest text-xs mb-6">Локация</h4>
+                <div class="rounded-2xl overflow-hidden border border-slate-700 h-48 w-full relative group">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23475.602742910796!2d26.47953964893979!3d42.48366440813735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a631627e1c8749%3A0x400a01269bf5670!2sYambol%2C%20Bulgaria!5e0!3m2!1sen!2sus!4v1707639515000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="group-hover:filter-none transition-all duration-500">
+                    </iframe>
+                </div>
+                <p class="text-xs text-slate-500 mt-3">📍 Кликнете на картата за навигация</p>
+            </div>
+
+        </div>
+
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 font-bold uppercase tracking-widest">
+            <p>© 2024 Д-р Ох Боли. Всички права запазени.</p>
+            <p>Дизайн: GG Solutions</p>
         </div>
     </div>
 </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

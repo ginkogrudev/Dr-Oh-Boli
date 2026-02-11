@@ -86,3 +86,41 @@ h1, h2, h3, h4, h5, h6, .btn-primary, .nav-link {
     border: 2px solid #f1f5f9;
     font-weight: 600;
 }
+
+/* --- INFINITE SCROLL WALL --- */
+.wall-mask {
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* gap-6 equivalent */
+}
+
+/* Scroll Up Animation */
+.scroll-up {
+    animation: scrollVertical 60s linear infinite;
+}
+
+/* Scroll Down Animation */
+.scroll-down {
+    animation: scrollVerticalReverse 60s linear infinite;
+}
+
+@keyframes scrollVertical {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollVerticalReverse {
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
+}
+
+/* Pause on Hover (Optional: stops the wall when user hovers to read) */
+.wall-container:hover .scroll-up,
+.wall-container:hover .scroll-down {
+    animation-play-state: paused;
+}
